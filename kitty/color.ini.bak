@@ -1,0 +1,34 @@
+window_padding_width 15
+
+foreground #e0e0e0
+background #1a1a1a
+
+color0 #151515
+color8 #606a7a
+
+color1 #ff5a5a
+color9 #ff5a5a
+
+color2 #4a90e2
+color10 #4a90e2
+
+color3 #d47bb3
+color11 #d47bb3
+
+color4 #3c4e6d
+color12 #3c4e6d
+
+color5 #5ab1f2
+color13 #5ab1f2
+
+color6 #76c7d8
+color14 #76c7d8
+
+color7 #c3d0da
+color15 #ffffff
+
+cursor #ffffff
+cursor_text_color #1a1a1a
+
+selection_foreground #1a1a1a
+selection_background #c3d0da
