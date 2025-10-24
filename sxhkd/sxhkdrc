@@ -1,6 +1,7 @@
 #
 # wm independent hotkeys
 #
+#
 
 # terminal emulator
 super + Return
@@ -124,14 +125,14 @@ super + ctrl + {Left,Down,Up,Right}
 alt + super + {Left,Down,Up,Right}
 	~/.config/bspwm/scripts/bspwm_resize {west,south,north,east}
 
-# Open Firefox
-super + shift + f
-	/usr/bin/firefox
-
 #open Chrome
 super + shift + g
 	/usr/bin/google-chrome-stable
 
+
+# Open Firefox
+super + shift + f
+	/usr/bin/firefox
 
 # Open Burpsuite
 super + shift + b
@@ -157,6 +158,9 @@ ctrl + shift + m
 super + shift + s
 	/usr/bin/flameshot gui
 
-# Obsidian
-super + shift + o
-	/usr/bin/obsidian
+ctrl + @Print
+	flameshot gui
+
+# BurpSuitePro
+ctrl + shift + p
+	/usr/bin/burpsuitepro
