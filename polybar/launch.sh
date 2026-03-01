@@ -17,19 +17,20 @@ monitors=$(xrandr --query | grep -c " connected")
 if [ "$monitors" -eq 1 ]; then
     polybar -q workspace -c "$DIR"/config.ini &
     polybar -q logo -c "$DIR"/config.ini &
-    polybar -q targeticon -c "$DIR"/config.ini &
     polybar -q target -c "$DIR"/config.ini &
     polybar -q network -c "$DIR"/config.ini &
     polybar -q centertop -c "$DIR"/config.ini &
-    
+    polybar -q target-icon -c "$DIR"/config.ini &
+    polybar -q target -c "$DIR"/config.ini &
+    polybar -q system -c "$DIR"/config.ini &
 else
     # If multiple monitors, launch one for each
     for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
         MONITOR=$m polybar -q workspace -c "$DIR"/config.ini &
 	MONITOR=$m polybar -q logo -c "$DIR"/config.ini &
-	MONITOR=$m polybar -q targeticon -c "$DIR"/config.ini &
-        MONITOR=$m polybar -q target -c "$DIR"/config.ini &
+	MONITOR=$m polybar -q target -c "$DIR"/config.ini &
 	MONITOR=$m polybar -q network -c "$DIR"/config.ini &
 	MONITOR=$m polybar -q centertop -c "$DIR"/config.ini &
+        MONITOR=$m polybar -q system -c "$DIR"/config.ini &
     done
 fi

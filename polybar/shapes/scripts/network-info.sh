@@ -23,9 +23,6 @@ fi
 ETH0_IP=$(ip -4 addr show eth0 2>/dev/null | grep -oP '(?<=inet\s)\d+(\.\d+){3}')
 TUN0_IP=$(ip -4 addr show tun0 2>/dev/null | grep -oP '(?<=inet\s)\d+(\.\d+){3}')
 
-echo $ETH0_IP > /tmp/polybar_network_interfaces.tmp
-echo $TUN0_IP >> /tmp/polybar_network_interfaces.tmp
-
 if [ -n "$ETH0_IP" ] || [ -n "$TUN0_IP" ]; then
     STATUS="%{F$RED_TAG}[NETWORK]%{F-} %{F$GRAY}::%{F-} %{F$WHITE}ONLINE%{F-}"
 else
